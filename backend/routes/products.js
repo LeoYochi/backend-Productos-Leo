@@ -1,11 +1,17 @@
+//Define las rutas REST para la API de productos.
+
+//Importa Express y el modelo Product
 const express = require("express");
 const Product = require("../models/Product");
+
+//Crea un router que agrupa todas las rutas de productos.
 const router = express.Router();
 
 // Crear producto
 router.post("/", async (req, res) => {
   try {
     const { nombre, precio, cantidad, categoria } = req.body;
+    //Crea un nuevo documento en MongoDB con Product.create
     const producto = await Product.create({ nombre, precio, cantidad, categoria });
     res.status(201).json(producto);
   } catch (err) {

@@ -28,3 +28,4 @@ const PORT = process.env.PORT || 5000;
 // arranca el servidor y escucha peticiones.
 app.listen(PORT, "0.0.0.0", () => console.log(`Servidor corriendo en puerto ${PORT}`));
 
+//mongodb+srv://LeoYochi64:LPM1343L@clusterleo.n9yqhqk.mongodb.net/inventario?retryWrites=true&w=majority
